@@ -7,9 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class ResetEncoders extends Command {
+public class ResetSensors extends Command {
 
-    public ResetEncoders() {
+    public ResetSensors() {
     	requires(Robot.drive);
     }
 
@@ -20,6 +20,7 @@ public class ResetEncoders extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Robot.drive.reset();
+    	Robot.gyro.reset();
     }
 
     // Make this return true when this Command no longer needs to run execute()
