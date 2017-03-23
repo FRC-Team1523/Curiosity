@@ -23,6 +23,7 @@ public class SetUpperGear extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	//Send to subsystem
     	Robot.gear.setLower(state);
     	finished=true;
     }
