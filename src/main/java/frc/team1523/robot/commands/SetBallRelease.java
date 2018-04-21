@@ -1,20 +1,19 @@
 package frc.team1523.robot.commands;
 
-import frc.team1523.robot.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team1523.robot.Robot;
 
 /**
  *
  */
 public class SetBallRelease extends Command {
 
-	private boolean state;
-	private boolean finished=false;
-	
+    private boolean state;
+    private boolean finished = false;
+
     public SetBallRelease(boolean state) {
         requires(Robot.ball);
-        this.state=state;
+        this.state = state;
     }
 
     // Called just before this Command runs the first time
@@ -23,8 +22,8 @@ public class SetBallRelease extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	//Send to subsystem
-    	Robot.ball.set(state);
+        //Send to subsystem
+        Robot.ball.set(state);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -39,6 +38,6 @@ public class SetBallRelease extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-    	end();
+        end();
     }
 }

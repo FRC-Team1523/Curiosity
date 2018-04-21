@@ -1,8 +1,7 @@
 package frc.team1523.robot.commands;
 
-import frc.team1523.robot.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team1523.robot.Robot;
 
 /**
  *
@@ -10,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class DriveJoystick extends Command {
 
     public DriveJoystick() {
-    	requires(Robot.drive);
+        requires(Robot.drive);
     }
 
     // Called just before this Command runs the first time
@@ -19,7 +18,7 @@ public class DriveJoystick extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.drive.drive(Robot.oi.getStick0());
+        Robot.drive.drive(Robot.oi.getStick0());
     }
 
     // Make this return true when this Command no longer needs to run execute()
